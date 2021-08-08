@@ -9,8 +9,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   late VideoPlayerController _controller;
+  final followers = 155;
+  final videosNo = 10;
+  final following = 122;
+  final List<String> videos = [
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+  ];
 
   @override
   void initState() {
@@ -38,10 +52,10 @@ class _HomeState extends State<Home> {
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(width*0.14),
+              borderRadius: BorderRadius.circular(width * 0.14),
             ),
             child: Padding(
-              padding:  EdgeInsets.all(width*0.055),
+              padding: EdgeInsets.all(width * 0.065),
               child: ListView(
                 physics: ClampingScrollPhysics(),
                 shrinkWrap: true,
@@ -69,90 +83,98 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                  Expanded(
-                    child: Row(
-                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CircleAvatar(
-                            radius: width*0.14,
-                            backgroundImage: NetworkImage(
-                              'https://res.cloudinary.com/vidita/image/upload/v1625871833/mine23_vpjxar.jpg',
-                            ),
+                  Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(
+                          0,
+                          width * 0.020,
+                          width * 0.020,
+                          width * 0.010,
+                        ),
+                        child: CircleAvatar(
+                          radius: width * 0.14,
+                          backgroundImage: NetworkImage(
+                            'https://res.cloudinary.com/vidita/image/upload/v1625389956/home_lnsyxx.png',
                           ),
                         ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Column(
-                                children: [
-                                  Text(
-                                    '10',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: width*0.040,
-                                    ),
+                      ),
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  videosNo.toString(),
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: width * 0.040,
                                   ),
-                                  Text(
-                                    'videos',
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: width*0.03,
-                                    ),
+                                ),
+                                Text(
+                                  'videos',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: width * 0.03,
                                   ),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    '155',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: width*0.040,
-                                    ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  followers.toString(),
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: width * 0.040,
                                   ),
-                                  Text(
-                                    'followers',
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: width*0.03,
-                                    ),
+                                ),
+                                Text(
+                                  'followers',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: width * 0.03,
                                   ),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    '122',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: width*0.040,
-                                    ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  following.toString(),
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: width * 0.040,
                                   ),
-                                  Text(
-                                    'following',
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: width*0.030,
-                                    ),
+                                ),
+                                Text(
+                                  'following',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: width * 0.030,
                                   ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
                   ),
                   Padding(
-                    padding:  EdgeInsets.fromLTRB(0, width*0.020, width*0.020, width*0.010),
+                    padding: EdgeInsets.fromLTRB(
+                      0,
+                      width * 0.020,
+                      width * 0.020,
+                      width * 0.010,
+                    ),
                     child: Text(
                       'Shantanu',
                       style: TextStyle(
-                        fontSize: width*0.050,
+                        fontSize: width * 0.050,
                         color: Colors.black,
                       ),
                     ),
@@ -160,14 +182,14 @@ class _HomeState extends State<Home> {
                   Text(
                     'Be Yourself, Everyone Else is Already Token',
                     style: TextStyle(
-                      fontSize: width*0.035,
+                      fontSize: width * 0.035,
                       color: Colors.grey,
                     ),
                   ),
                   Text(
                     'shantanu@gmail.com',
                     style: TextStyle(
-                      fontSize: width*0.027,
+                      fontSize: width * 0.027,
                       color: Colors.grey,
                     ),
                   ),
@@ -177,43 +199,40 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          width: width*0.4,
-                          child: IntrinsicWidth(
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.red,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
+                          width: width * 0.4,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.red,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                              onPressed: () {},
-                              child: Text(
-                                'Follow',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: width*0.055,
-                                ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Follow',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: width * 0.055,
                               ),
                             ),
                           ),
                         ),
                         Container(
-                          width: width*0.4,
-                          child: IntrinsicWidth(
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.red,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(width*0.025),
-                                ),
+                          width: width * 0.4,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.red,
+                              shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.circular(width * 0.025),
                               ),
-                              onPressed: () {},
-                              child: Text(
-                                'Message',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: width*0.055,
-                                ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Message',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: width * 0.055,
                               ),
                             ),
                           ),
@@ -223,7 +242,7 @@ class _HomeState extends State<Home> {
                   ),
                   new StaggeredGridView.countBuilder(
                     crossAxisCount: 4,
-                    itemCount: 8,
+                    itemCount: 7,
                     shrinkWrap: true,
                     physics: ClampingScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) =>
@@ -232,15 +251,17 @@ class _HomeState extends State<Home> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => VideoApp(),
+                            builder: (_) => VideoApp(videos[index]),
                           ),
                         );
                       },
                       child: Stack(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(width*0.035),
-                            child: VideoPlayer(_controller),
+                            borderRadius: BorderRadius.circular(width * 0.045),
+                            child: VideoWidget(
+                              url: videos[index],
+                            ),
                           ),
                           Align(
                             alignment: Alignment.bottomLeft,
@@ -249,13 +270,13 @@ class _HomeState extends State<Home> {
                               icon: Icon(
                                 Icons.remove_red_eye_outlined,
                                 color: Colors.white,
-                                size: width*0.035,
+                                size: width * 0.035,
                               ),
                               label: Text(
                                 '128',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: width*0.025,
+                                  fontSize: width * 0.025,
                                 ),
                               ),
                             ),
@@ -265,8 +286,8 @@ class _HomeState extends State<Home> {
                     ),
                     staggeredTileBuilder: (int index) =>
                         new StaggeredTile.count(2, index.isEven ? 2 : 1),
-                    mainAxisSpacing: width*0.025,
-                    crossAxisSpacing: width*0.025,
+                    mainAxisSpacing: width * 0.025,
+                    crossAxisSpacing: width * 0.025,
                   )
                 ],
               ),
@@ -274,6 +295,42 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class VideoWidget extends StatefulWidget {
+  final String url;
+
+  const VideoWidget({required this.url});
+
+  @override
+  _VideoWidgetState createState() => _VideoWidgetState();
+}
+
+class _VideoWidgetState extends State<VideoWidget> {
+  late VideoPlayerController videoPlayerController;
+
+  @override
+  void initState() {
+    super.initState();
+    videoPlayerController = new VideoPlayerController.network(widget.url)
+      ..initialize().then((_) {
+        setState(() {});
+      });
+  }
+
+  @override
+  void dispose() {
+    videoPlayerController.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return VideoPlayer(
+      videoPlayerController,
     );
   }
 }
