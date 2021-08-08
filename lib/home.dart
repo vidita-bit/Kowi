@@ -230,7 +230,7 @@ class _HomeState extends State<Home> {
                   ),
                   new StaggeredGridView.countBuilder(
                     crossAxisCount: 4,
-                    itemCount: 7,
+                    itemCount: 6,
                     shrinkWrap: true,
                     physics: ClampingScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) =>
