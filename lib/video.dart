@@ -18,7 +18,6 @@ class _VideoAppState extends State<VideoApp> {
     _controller = VideoPlayerController.network(
       widget.url,
     )..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {
           _controller.play();
         });
@@ -40,18 +39,6 @@ class _VideoAppState extends State<VideoApp> {
                 )
               : Container(),
         ),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {
-        //     setState(() {
-        //       _controller.value.isPlaying
-        //           ? _controller.pause()
-        //           : _controller.play();
-        //     });
-        //   },
-        //   child: Icon(
-        //     _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        //   ),
-        // ),
       ),
     );
   }
